@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import '../helpers/location_helpers.dart';
@@ -34,7 +36,7 @@ class _LocationInputState extends State<LocationInput> {
           width: double.infinity,
           height: 200,
           child: _previewImageUrl == null
-              ? Text(
+              ? const Text(
                   'no location chosen',
                   textAlign: TextAlign.center,
                 )
@@ -50,14 +52,14 @@ class _LocationInputState extends State<LocationInput> {
             FlatButton.icon(
               onPressed: _getCurrentUserLocation,
               textColor: Theme.of(context).primaryColor,
-              icon: Icon(Icons.location_on),
-              label: Text('Current Location'),
+              icon: const Icon(Icons.location_on),
+              label: const Text('Current Location'),
             ),
             FlatButton.icon(
               onPressed: () {},
               textColor: Theme.of(context).primaryColor,
-              icon: Icon(Icons.map),
-              label: Text('Select on Map'),
+              icon: const Icon(Icons.map),
+              label: const Text('Select on Map'),
             ),
           ],
         ),

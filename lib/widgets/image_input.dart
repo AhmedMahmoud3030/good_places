@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, use_key_in_widget_constructors, prefer_const_constructors_in_immutables
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -9,6 +11,7 @@ class ImageInput extends StatefulWidget {
   final Function onSelectImage;
 
   ImageInput(this.onSelectImage);
+  //
 
   @override
   _ImageInputState createState() => _ImageInputState();
@@ -50,19 +53,19 @@ class _ImageInputState extends State<ImageInput> {
                   fit: BoxFit.cover,
                   width: double.infinity,
                 )
-              : Text(
+              : const Text(
                   'No Image Taken',
                   textAlign: TextAlign.center,
                 ),
           alignment: Alignment.center,
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Expanded(
           child: FlatButton.icon(
-            icon: Icon(Icons.camera),
-            label: Text('Take Picture'),
+            icon: const Icon(Icons.camera),
+            label: const Text('Take Picture'),
             textColor: Theme.of(context).primaryColor,
             onPressed: _takePicture,
           ),

@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, deprecated_member_use
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -35,7 +37,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add a New Place'),
+        title: const Text('Add a New Place'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -43,18 +45,18 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
           Expanded(
             child: SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Column(
                   children: <Widget>[
                     TextField(
                       decoration: const InputDecoration(labelText: 'Title'),
                       controller: _titleController,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     ImageInput(_selectImage),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     LocationInput(),
@@ -64,8 +66,8 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
             ),
           ),
           RaisedButton.icon(
-            icon: Icon(Icons.add),
-            label: Text('Add Place'),
+            icon: const Icon(Icons.add),
+            label: const Text('Add Place'),
             onPressed: _savePlace,
             elevation: 0,
             materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
